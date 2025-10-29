@@ -135,6 +135,210 @@ abbr[data-original-title] {
           text-decoration-skip-ink: none;
 }
 
+/* --- CSS para la Sección Resume/Personal Info (La segunda imagen) --- */
+.resume-section {
+    background: #fff;
+    padding-top: 50px; /* Para hacer espacio para la foto de perfil flotante */
+    padding-bottom: 80px;
+    position: relative;
+    z-index: 5;
+}
+
+.resume-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* Contenedor de la foto de perfil y la navegación secundaria */
+.profile-photo-container {
+    position: absolute;
+    top: -50px; /* Sube la foto sobre el borde superior */
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 10;
+    background: #fff; /* Fondo blanco para separar */
+    padding-bottom: 10px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Segunda Navegación (la que está debajo de la foto) */
+.sub-navbar {
+    margin-top: 15px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.sub-nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.sub-nav-item {
+    margin: 0 15px;
+}
+
+.sub-nav-link {
+    text-decoration: none;
+    color: #333;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.sub-nav-item.active .sub-nav-link {
+    color: #ff3366; /* Color rojo para el enlace activo */
+    border-bottom: 2px solid #ff3366;
+    padding-bottom: 5px;
+}
+
+.sub-nav-link:hover {
+    color: #ff3366;
+}
+
+
+/* Grid de Contenido de 3 Columnas */
+.resume-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 120px; /* Empuja el contenido hacia abajo para evitar la foto */
+}
+
+.grid-item {
+    padding: 20px;
+    border-right: 1px solid #eee;
+}
+
+.grid-item:last-child {
+    border-right: none;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Línea roja debajo del título */
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #ff3366;
+}
+
+/* Columna 1: Who am I */
+.tagline {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #ff3366;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #ff3366;
+    color: #ff3366;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download-btn:hover {
+    background-color: #ff3366;
+    color: #fff;
+}
+
+/* Columna 2: Personal Info */
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+}
+
+.info-list li {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+.info-label {
+    font-weight: 600;
+    color: #333;
+    margin-right: 5px;
+}
+
+.social-icons-inline {
+    margin-top: 20px;
+}
+
+.social-icons-inline a {
+    color: #999;
+    font-size: 1.2rem;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-icons-inline a:hover {
+    color: #ff3366;
+}
+
+/* Columna 3: My Expertise */
+.expertise-item {
+    margin-bottom: 20px;
+}
+
+.expertise-icon {
+    float: left;
+    font-size: 1.5rem;
+    color: #ff3366;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.expertise-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+
+.expertise-description {
+    color: #777;
+    font-size: 0.9rem;
+    margin-left: 30px; /* Alinea con el texto */
+}
+
 address {
   margin-bottom: 1rem;
   font-style: normal;
